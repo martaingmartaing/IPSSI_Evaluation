@@ -19,8 +19,8 @@ install:
     - npm install twly
 script:
 
-  ./node_modules/.bin/jshint testjshint.js
-  ./node_modules/.bin/retire
-  ./node_modules/.bin/twly
+  - ./node_modules/.bin/jshint testjshint.js
+  - ./node_modules/.bin/retire
+  - ./node_modules/.bin/twly
 
     
