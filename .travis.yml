@@ -1,0 +1,26 @@
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+language: node_js
+node_js:
+  - "12"
+
+
+before_install:
+    
+install:
+    - npm install
+    - npm install jshint
+    - npm install retire
+    - npm install twly
+script:
+
+  ./node_modules/.bin/jshint /src/main.js
+  ./node_modules/.bin/retire
+  ./node_modules/.bin/twly
+
+    
