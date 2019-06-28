@@ -7,7 +7,7 @@ addons:
       - google-chrome-stable
 language: node_js
 node_js:
-  - "10"
+  - "12"
 
 
 before_install:
@@ -23,4 +23,7 @@ script:
   - ./node_modules/.bin/retire
   - ./node_modules/.bin/twly
 
-    
+deploy:
+  provider: heroku
+  api_key:
+    secure: "3cb7d019-2657-424e-8c62-ed7426a8a836"
