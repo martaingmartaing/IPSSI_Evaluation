@@ -7,7 +7,7 @@ addons:
       - google-chrome-stable
 language: node_js
 node_js:
-  - "12"
+  - "10"
 
 
 before_install:
@@ -19,7 +19,7 @@ install:
     - npm install twly
 script:
 
-  ./node_modules/.bin/jshint /src/main.js
+  ./node_modules/.bin/jshint testjshint.js
   ./node_modules/.bin/retire
   ./node_modules/.bin/twly
 
